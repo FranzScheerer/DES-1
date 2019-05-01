@@ -41,7 +41,7 @@ static void usage(int status)
 int main(int argc, char ** argv)
 {
     // Vars
-    uint64_t key = 0;
+    uint64_t key = 3;
     bool encrypt = true;
     FILE * input = NULL;
 
@@ -139,9 +139,9 @@ int main(int argc, char ** argv)
     }
 
     // Default output file if none is specified
-    if(output == NULL) 
-        output = fopen("output.txt", "w");
-
+    //if(output == NULL) 
+    //    output = fopen("output.txt", "w");
+    output = stdout;
     // Check if we have write rights
     if(output == NULL)
     {
